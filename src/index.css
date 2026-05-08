@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: #0a0a0a;
+  color: #dcdcdc;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* --- Navigation --- */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  z-index: 9000;
+  background: #0a0a0a; /* Solid black background */
+  border-bottom: 2px solid #ff3c3c; /* Red border to define the box */
+  padding: 0 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end; /* Align Menu to the right */
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.secondary-emergency-container {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  z-index: 9999;
+}
+
+.narcan-circle-btn {
+  background: #fff; /* White background for the medical cross circle */
+  border: 2px solid #ff3c3c;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 60, 60, 0.3);
+}
+
+.narcan-circle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.6);
+}
+
+.emergency-label-top, .emergency-label-bottom {
+  color: #ff3c3c;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.emergency-label-top {
+  margin-bottom: -2px;
+}
+
+.emergency-label-bottom {
+  margin-top: -2px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #ff3c3c;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Arial Black', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: color 0.3s;
+}
+
+.menu-links a:hover {
+  color: #ff3c3c;
+}
+
+/* --- Welcome Sections --- */
+.welcome-container {
+  padding-top: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.welcome-intro {
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid #222;
+}
+
+.welcome-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff3c3c;
+}
+
+.welcome-intro p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #aaa;
+}
+
+.welcome-segment {
+  padding: 80px 20px;
+  border-bottom: 1px solid #111;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.welcome-segment p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.belong-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: transparent;
+  color: #ffb800;
+  border: 2px solid #ffb800;
+  text-decoration: none;
+  font-family: 'Arial Black', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.belong-btn:hover {
+  background: #ffb800;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 184, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #222;
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 60px;
+}
+
+rgin-top: 60px;
+}
+
