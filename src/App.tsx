@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NuraChat from './components/NuraChat';
+import ForgeOverlay from './components/ForgeOverlay';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Ministry from './pages/Ministry';
@@ -74,6 +75,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <ForgeOverlay isOpen={false} onClose={() => {}} />
         </div>
       </Router>
     </ForgeProvider>
