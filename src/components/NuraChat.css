@@ -1,0 +1,212 @@
+.nura-btn-container {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.nura-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  outline: none;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.nura-svg-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.nura-circle-text {
+  fill: #ffd700;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: rotateText 10s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.nura-help-label {
+  color: #ff3c3c;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #000;
+  pointer-events: none;
+  margin-top: -10px; /* Slight overlap with the circle is fine, but keeps it separate from the main button body */
+}
+
+.nura-btn:hover {
+  transform: scale(1.05);
+}
+
+.nura-icon-flame-on-cross {
+  position: absolute;
+  color: #ff0000; /* Red Flame as requested */
+  width: 22px;
+  height: 22px;
+  top: 38px;
+  left: 48px;
+  transform: translateX(-50%);
+  fill: #ff0000;
+  animation: flicker 1.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.9); }
+}
+
+.nura-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nura-modal {
+  background: #111;
+  border: 1px solid #ff3c3c;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  height: 80vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px rgba(255, 60, 60, 0.2);
+  overflow: hidden;
+}
+
+.nura-header {
+  background: #0a0a0a;
+  border-bottom: 1px solid #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nura-header h2 {
+  margin: 0;
+  color: #ff3c3c;
+  font-family: 'Arial Black', Impact, sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.nura-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nura-close:hover {
+  color: #fff;
+}
+
+.nura-chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.nura-msg {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.nura-msg p {
+  margin: 0;
+}
+
+.nura-msg.assistant {
+  align-self: flex-start;
+  background: #1a1a1a;
+  color: #dcdcdc;
+  border-left: 3px solid #ff3c3c;
+}
+
+.nura-msg.user {
+  align-self: flex-end;
+  background: #222;
+  color: #fff;
+  border-right: 3px solid #ffb800;
+}
+
+.nura-input-area {
+  padding: 15px;
+  background: #0a0a0a;
+  border-top: 1px solid #333;
+  display: flex;
+  gap: 10px;
+}
+
+.nura-input-area input {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px 15px;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+}
+
+.nura-input-area input:focus {
+  border-color: #ff3c3c;
+}
+
+.nura-input-area button {
+  background: #ff3c3c;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.nura-input-area button:hover:not(:disabled) {
+  background: #ff0000;
+}
+
+.nura-input-area button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
